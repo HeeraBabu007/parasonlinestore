@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	  		  	<title>PARAS Online Store</title>
+	  	<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  	<link rel="stylesheet" href="custom.css">
+	</head>
+	<body>
+		<div class="jumbotron jumbotron-fluid">
+	  		<div class="container">
+	    		<h1>PARAS Online Store</h1>      
+	    		<p>You can login by using Google, Facebook, Twitter and Linked In.</p></div>
+		</div>
+
+		<div class="container">
+		<h2>Total Amount To Pay</h2>
+		<h2 th:utext="${price}"></h2>
+        <h2>Shipping Address</h2>
+		<p>Please, Fill the current address where you want to deliver this product.</p>
+		
+		<form class="form-inline" action="#">
+		    <input type="email" class="form-control" placeholder="Enter email" name="email">
+		    <input type="password" class="form-control"  placeholder="Enter password" name="password">
+		    <input type="text" class="form-control"  placeholder="Enter Address" name="address">
+		    <input type="text" class="form-control"  placeholder="Enter Mobile" name="Mobile">
+		    <button type="submit" class="btn btn-primary">Save Address Details</button>
+		  </form>
+		  <br/>
+		  <a href="https://www.instamojo.com/@heerababu80/" rel="im-checkout" data-text="Pay" data-css-style="color:#ffffff; background:#75c26a; width:300px; border-radius:4px"   data-layout="vertical"></a>
+<script src="https://js.instamojo.com/v1/button.js"></script>
+		</div>
+	</body>
+</html>
